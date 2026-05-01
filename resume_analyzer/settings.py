@@ -125,12 +125,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # CORS SETTINGS
-CORS_ALLOW_ALL_ORIGINS = True
+
 
 CORS_ALLOWED_ORIGINS = [
     "https://resumechecktest.netlify.app",
 ]
-
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
