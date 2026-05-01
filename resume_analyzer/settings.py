@@ -28,10 +28,10 @@ SECRET_KEY = 'django-insecure-^$b_ct)x-usd)nxq0rr12d+1o30z4h9i!=zou_q=x^3+=@9nng
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    "backend-of-resume-analyzer.onrender.com",
     "resume-analyzer.onrender.com",
     "localhost",
 ]
-
 
 # Application definition
 
