@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-^$b_ct)x-usd)nxq0rr12d+1o30z4h9i!=zou_q=x^3+=@9nng
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "resume-analyzer.onrender.com",
+    "localhost",
+]
 
 
 # Application definition
@@ -135,4 +138,3 @@ CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
     "https://resumechecktest.netlify.app",
 ]
-Access-Control-Allow-Origin= True
