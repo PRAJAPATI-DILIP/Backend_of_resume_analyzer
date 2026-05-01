@@ -135,3 +135,4 @@ CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
     "https://resumechecktest.netlify.app",
 ]
+Access-Control-Allow-Origin= True
