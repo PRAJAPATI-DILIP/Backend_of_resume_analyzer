@@ -1,11 +1,12 @@
 import pdfplumber
 import nltk
 
-# ✅ Download only if missing
+# ✅ MUST be before pyresparser import
 try:
     nltk.data.find('corpora/stopwords')
 except LookupError:
     nltk.download('stopwords')
+
 
 
 def extract_text(file):

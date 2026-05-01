@@ -23,7 +23,7 @@ def analyze_resume_text(text):
         "Post Graduation": ["master", "m.tech", "msc", "mca", "mba"]
     }
 
-    # 🔹 Skills detection (using regex 🔥)
+    # 🔹 Skills detection
     found_skills = []
     for skill in SKILL_DB:
         pattern = r'\b' + re.escape(skill) + r'\b'
@@ -61,7 +61,6 @@ def analyze_resume(request):
 
     text = extract_text(file).lower()
 
-    # 🔥 Debug (optional)
     print("TEXT 👉", text[:500])
 
     score, feedback, skills, education = analyze_resume_text(text)
