@@ -2,8 +2,14 @@ from django.http import HttpResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from resume_check.services.parser import extract_text
-
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.decorators import api_view
 import re
+
+@csrf_exempt
+
+
+
 
 
 # 🔹 Core logic function

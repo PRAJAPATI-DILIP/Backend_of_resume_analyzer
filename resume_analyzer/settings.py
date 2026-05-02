@@ -28,15 +28,15 @@ SECRET_KEY = 'django-insecure-^$b_ct)x-usd)nxq0rr12d+1o30z4h9i!=zou_q=x^3+=@9nng
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "backend-of-resume-analyzer.onrender.com",
-    "resume-analyzer.onrender.com",
+    "127.0.0.1",
     "localhost",
+    "backend-of-resume-analyzer.onrender.com",
 ]
 
 # Application definition
 
 INSTALLED_APPS = [
-
+     'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,11 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'resume_check',
     'rest_framework',
-    'corsheaders',
+    
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',   # ONLY ONCE (top)
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -128,13 +128,21 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # CORS SETTINGS
-
-
 CORS_ALLOWED_ORIGINS = [
     "https://resumechecktest.netlify.app",
+    "http://localhost:4200",   # ✅ ADD THIS
 ]
-CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_CREDENTIALS = False
 
 CSRF_TRUSTED_ORIGINS = [
     "https://resumechecktest.netlify.app",
+    "http://localhost:4200",   # ✅ ADD THIS
+]
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "DELETE",
+    "OPTIONS",
 ]
